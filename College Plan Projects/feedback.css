@@ -1,0 +1,213 @@
+
+/* This is the css file for the feedback page. It adds decoration and creates navigation in the html file. It was written by Pranav Vemparala on 12/07/2022. */
+html {
+	background-color: black;
+}
+*{
+	margin:0;
+	padding:0;
+	text-decoration: none;
+}
+.body {
+	font-family: Verdana, sans-serif;
+	font-size: 100%;
+	border: 3px solid black;
+	box-shadow: 0px 5px 15px 15px;
+	margin: 16px auto;
+	width: 75%;
+	background-color: white;
+	font-family: 'Mukta', sans-serif;
+
+}
+body {
+	clear: left;
+}
+h1 {
+	margin-top: 1em;
+}
+.header img {
+	float: left;
+	height: 57px;
+	border-radius: 68px;
+	margin-top: -4px;
+	margin-right: 17px;
+}
+
+/* formatting of the header */
+.header {
+	border-bottom: 2px solid black;
+	padding: 0.5em 1em;
+}
+
+h1 {
+	font-size: 150%;
+	font-weight: bold;
+	margin-left: 1em;
+	margin-bottom: 0.75em;
+	margin-top: 0.25em;
+}
+
+/* Links color and effects */
+a {
+	/*! color: orange; */
+	text-align: center;
+	/*! margin-left: ; */
+}
+a:hover, a:focus {
+	color: green;
+}
+ul {
+	line-height: 2;
+	margin-right: 2em;
+	list-style-type: none;
+}
+li {
+	margin-left: 6em;
+}
+
+/* footer to decorate and format */
+footer {
+	margin-top: 2em;
+	padding-bottom: 0.5em;
+	border-top: 2px solid black;
+	padding-top: 1em;
+	background-color: white;
+}
+footer span {
+	font-size: 90%;
+	margin-left: 35%;
+	text-align: center;
+}
+/* Nav to set list to the left column */
+#nav_sidebar {
+  width: 208px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 10px 0 50px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: 0.5s;
+  float: right;
+  margin-right: 10px;
+  margin-top: 23px;
+}
+#nav_sidebar ul li a {
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+	padding-left: 5px;
+	text-align: left;
+	margin-left: -71px;
+}
+/* Nav to create two-tier navigation */
+#nav_menu ul {
+	list-style: none;
+	position: relative;
+	background-color: black;
+	margin-right: 0em;
+	/*! text-align: left; */
+	margin-right: ;
+}
+#nav_menu ul li {
+	float: left;
+	margin-right: 63px;
+}
+#nav_menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	padding-right: 80px;
+	left: 36%;
+	width: 74px;
+	padding-left: -88px;
+}
+#nav_menu ul ul li {
+	float: none;
+	padding: 8px 0 0;
+	
+}
+#nav_menu ul li:hover > ul{
+	display: block;
+}
+#nav_menu > ul::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+#lastitem ul li a:hover, #lastitem ul li a:focus {
+	margin-left: 100px;
+}
+.body h3 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+} 
+.lastitem ul li {
+	position: relative;
+	left: -40px;
+}
+.lastitem li a {
+	left: -21px;
+	position: relative;
+}
+#nav_menu ul ul li:hover {
+		font-family: MedievalSharp; 
+}
+p:first-letter {
+	margin-left: 40px;
+}
+article img {
+  float: left;
+  width: 20%;
+  margin: -10px 10px 0;
+  box-shadow: 5px 0 8px rgba(100, 98, 98, 0.47);
+  margin-top: -25%;
+  margin-left: 50%;
+}
+p {
+	margin-left: 10px;
+	width: 550px;
+}
+a:current {
+	color: blue;
+}
+#myform h2 {
+	margin-left: -4%;
+}
+@media only screen and (max-width: 1170px) {
+	#nav_menu ul li {
+		float: none;
+		margin-right: 0px;
+		margin-left: 43%;
+	}
+}
+@media only screen and (max-width: 1250px) {
+	#nav_menu ul li {
+		margin-right: 115px;
+	}
+}
+@media only screen and (max-width: 1060px) {
+	article img {
+		display: none;
+	}
+}
+a:hover {
+	font-weight: bold;
+}
+img:hover {
+	transform: rotateX(180deg);
+}
+img{
+	transition: 2s;
+}
+@media only screen and (max-width: 1170px) {
+	#nav_menu ul li {
+		float: none;
+		margin-right: 0px;
+		margin-left: 43%;
+	}
+}
+@media only screen and (max-width: 1250px) {
+	#nav_menu ul li {
+		margin-right: 115px;
+	}
+}

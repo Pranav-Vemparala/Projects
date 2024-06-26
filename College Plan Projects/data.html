@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Survey Data</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles/home.css" >
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="slicknav.css">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet"> 
+<!-- This is the page that displays the data in the form. It was written by Pranav Vemparala on 12/07/2022. This page uses some of the code for the homework on forms. -->
+<style>
+    html {
+    background-color: black;
+}
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+}
+.body {
+    font-family: Verdana, sans-serif;
+    font-size: 100%;
+    border: 3px solid black;
+    box-shadow: 0px 5px 15px 15px;
+    margin: 16px auto;
+    width: 800px;
+    background-color: white;
+    margin-top: -300px;
+
+}
+body {
+    clear: left;
+}
+h1 {
+    margin-top: 1em;
+}
+.header img {
+    float: left;
+    height: 57px;
+    border-radius: 68px;
+    margin-top: -4px;
+    margin-right: 17px;
+}
+
+/* formatting of the header */
+.header {
+    border-bottom: 2px solid black;
+    padding: 0.5em 1em;
+}
+
+h1 {
+    font-size: 150%;
+    font-weight: bold;
+    margin-left: 1em;
+    margin-bottom: 0.75em;
+    margin-top: 0.25em;
+}
+
+/* Links color and effects */
+a {
+    /*! color: orange; */
+    text-align: center;
+    /*! margin-left: ; */
+}
+a:hover, a:focus {
+    color: green;
+}
+ul {
+    line-height: 2;
+    margin-right: 2em;
+    list-style-type: none;
+}
+li {
+    margin-left: 6em;
+}
+
+/* footer to decorate and format */
+footer {
+    margin-top: 20em;
+    padding-bottom: 0.5em;
+    border-top: 2px solid black;
+    padding-top: 1em;
+    background-color: white;
+}
+footer span {
+    font-size: 90%;
+    margin-left:344px ;
+    text-align: center;
+}
+/* Nav to set list to the left column */
+#nav_sidebar {
+  width: 208px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 10px 0 50px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: 0.5s;
+  float: right;
+  margin-right: 10px;
+  margin-top: 23px;
+}
+#nav_sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding-left: 5px;
+    text-align: left;
+    margin-left: -71px;
+}
+/* Nav to create two-tier navigation */
+#nav_menu ul {
+    list-style: none;
+    position: relative;
+    background-color: black;
+    margin-right: 0em;
+    /*! text-align: left; */
+    margin-right: ;
+}
+#nav_menu ul li {
+    float: left;
+    margin-right: 63px;
+}
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding-right: 80px;
+    left: 36%;
+    width: 74px;
+    padding-left: -88px;
+}
+#nav_menu ul ul li {
+    float: none;
+    padding: 8px 0 0;
+    
+}
+#nav_menu ul li:hover > ul{
+    display: block;
+}
+#nav_menu > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#lastitem ul li a:hover, #lastitem ul li a:focus {
+    margin-left: 100px;
+}
+.body h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+} 
+.lastitem ul li {
+    position: relative;
+    left: -40px;
+}
+.lastitem li a {
+    left: -21px;
+    position: relative;
+}
+#nav_menu ul ul li:hover {
+        font-family: MedievalSharp; 
+}
+p:first-letter {
+    margin-left: 40px;
+}
+article img {
+  float: left;
+  width: 9%;
+  border-radius: 30%;
+  margin: -10px 10px 0;
+  box-shadow: 5px 0 8px rgba(100, 98, 98, 0.47);
+}
+p {
+    margin-left: 10px;
+    width: 550px;
+}
+    }
+    dt {
+        font-weight: bold;
+    }
+    dl {
+        color: black;
+        position: relative;
+        left: 500px;
+        top: 149px;
+        width: 24%;
+    }
+</style>
+<script type="text/javascript">
+//<![CDATA[
+var decode = function ( text ) {
+    text = text.replace(/\+/g, " ");
+    text = text.replace(/%[a-fA-F0-9]{2}/g, 
+        function ( text ) {
+            return String.fromCharCode( "0x" + text.substr(1,2));
+        }
+    );
+    return text;
+}
+    
+var display_data = function () {
+    var query = location.search.replace("?", "");
+    if ( query == "" ) return;
+    
+    var fields = query.split("&");
+    
+    if ( fields.length == 0 ) {
+        document.write("<p>No data was submitted.</p>");
+    } else {
+        document.write("<dl>");
+        var field_parts;
+        for ( var i in fields ) {
+            field_parts = fields[i].split("=");
+            field_parts[0] = decode( field_parts[0] );
+            field_parts[1] = decode( field_parts[1] );
+            document.write("<dt>" + field_parts[0] + "</dt>");
+            document.write("<dd>" + field_parts[1] + "</dd>");
+        }
+        document.write("</dl>");
+    }
+}
+//]]>
+</script>
+</head>
+
+<body>
+    <h1>Survey Data</h1>
+    <script>display_data();</script>
+    <div class="body">  
+<div class="header">
+<img src="images/iStock_000021255451_Large-780x585.jpg" alt="College Hat">
+<h1>The College Plan</h1>
+</div>
+<nav id="nav_menu">
+    <ul>
+        <li><a href="index.html" style="color: #ff7b7b;">Home</a></li>
+        <li class="lastitem">
+            <a href="senior_year_plan.html" style="color: white;">Senior Year Plan</a></li>
+            
+        <li><a href="feedback.html" style="color: white;">Send Feedback</a></li>
+    </ul>
+</nav>
+<nav id="nav_sidebar"><ul>
+<li><a href="#" onclick="window.print();">Print Page</a></li>
+<li><a href="index.html">Go Home</a></li>
+</ul></nav>
+<h1>Data from Form</h1>
+<footer><span>There is a right college for everyone</span></footer>
+</div>
+</body>
+</html>

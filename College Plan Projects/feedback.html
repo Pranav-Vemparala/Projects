@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>The College Plan</title>
+	<link rel="stylesheet" href="styles/feedback.css" >
+	<link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="slicknav.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet"> 
+</head>
+<!-- This is the page that displays the form. It was written by Pranav Vemparala on 12/07/2022. This page uses some of the code for the homework on forms. -->
+<body>
+<div class="body">	
+<div class="header">
+<img src="images/iStock_000021255451_Large-780x585.jpg" alt="College Hat">
+<h1>The College Plan - Try It</h1>
+</div>
+<nav id="nav_menu">
+	<ul>
+		<li><a href="index.html" style="color: white;">Home</a></li>
+		<li class="lastitem">
+			<a href="senior_year_plan.html" style="color: white;">Senior Year Plan</a></li>
+			
+		<li><a href="feedback.html" style="color: #ff7b7b;">Send Feedback</a></li>
+	</ul>
+</nav>
+<nav id="nav_sidebar"><ul>
+<li><a href="index.html">Go Back Home</a></li>
+<li><a href="mailto: pranavtheredpanda@gmail.com">Email Me</a></li>
+</ul></nav>
+<br>
+<article>
+<form id="myform" action="data.html" method="get" style="margin-left: 10%;">
+	
+	<h2 style="margin-left: -4%;">Contact information</h2>
+	<label for="email">Email address:</label>
+    <input type="email" name="email" id="email" autofocus><br>
+    <label for="firstname">First name:</label>
+    <input type="text" name="firstname" id="firstname"><br>
+    <label for="lastname">Last name:</label>
+    <input type="text" name="lastname" id="lastname"><br>
+    
+    <h2 style="margin-left: -4%;">Geographic information</h2>
+    <label for="state">State: </label>
+    <input type="text" name="state" id="state" placeholder="Two characters" pattern="[A-Za-Z]{2}"><br>
+    <label for="zip">Zip Code: </label>
+    <input type="text" name="zip" id="zip" placeholder="Five digits" pattern="\d{5}"><br>
+
+    <h2 style="margin-left: -4%;">How did you hear about us?</h2>
+    <input type="checkbox" name="websearch" id="websearch" value="websearch">
+    <label for="websearch">Web Search</label>
+    <input type="checkbox" name="facebook" id="facebook" value="facebook">
+    <label for="facebook">Facebook</label>
+    <input type="checkbox" name="twitter" id="twitter" value="twitter">
+    <label for="twitter">Twitter</label>
+    <input type="checkbox" name="emailmsg" id="emailmsg" value="emailmsg">
+    <label for="emailmsg">Email message</label>
+    <br>
+    <label for="feedback">Feedback or Questions:</label>
+    <br>
+    <input type="text" name="feedback" id="feedback" value="">
+  	<br>
+    <input type="submit" name="button" id="button" value="Submit">
+    <input type="reset" name="reset" id="reset"> 
+</form>
+<map name="feedback">
+<area shape="rect" coords="0,0,80,80.78" href="https://1.bp.blogspot.com/-YYx_lm57014/Uz10OlXV-kI/AAAAAAAAD_E/n4d-HdjTB3s/s1600/How-to-Solve-Bad-Picture-Quality-issue-in-blogger.png">
+<area shape="rect" coords="0, 0, 160, 80.78" href="https://ipwatchdog.com/wp-content/uploads/2016/02/quality-excellence-checklist.jpg">
+</map>
+<img src="images/feedback.jpg" usemap="#feedback">
+<br>
+</article>
+<footer><span>There is a right college for everyone</span></footer>
+</div>
+</body>
+</html>

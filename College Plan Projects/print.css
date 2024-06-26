@@ -1,0 +1,6 @@
+@media print {
+  .body {
+    size: landscape;
+    size: a4;
+  }  
+}
